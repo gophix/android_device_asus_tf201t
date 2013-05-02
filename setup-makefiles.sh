@@ -38,7 +38,8 @@ for FILE in `cat proprietary-files.txt`; do
     if [ $COUNT = "0" ]; then
         LINEEND=""
     fi
-    echo "    $OUTDIR/proprietary/$FILE:system/$FILE$LINEEND" >> $MAKEFILE
+    DEST=`echo $FILE | sed 's:lib/mpu3050:lib:' `
+    echo "    $OUTDIR/proprietary/$FILE:system/$DEST$LINEEND" >> $MAKEFILE
 done
 
 (cat << EOF) > ../../../$OUTDIR/$DEVICE-vendor.mk
