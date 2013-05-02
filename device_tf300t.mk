@@ -69,14 +69,15 @@ PRODUCT_PACKAGES += \
     make_ext4fs \
     setup_fs \
     audio.a2dp.default \
-    tinymix \
+    audio.usb.default \
     libaudioutils \
     AutoParts_tfp \
     blobpack_tfp \
     mischelp \
     wifimacwriter \
     com.cyanogenmod.asusdec \
-    libasusdec_jni
+    libasusdec_jni \
+    libnetcmdiface
 
 # Propertys spacific for this device
 PRODUCT_PROPERTY_OVERRIDES := \
