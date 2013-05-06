@@ -58,6 +58,9 @@ on post-fs-data
 on boot
 
 # bluetooth
+    # change back to bluetooth from system
+    chown bluetooth net_bt_stack /data/misc/bluetooth
+
     # UART device
     chmod 0660 /dev/ttyHS2
     chown bluetooth net_bt_stack /dev/ttyHS2
@@ -65,6 +68,7 @@ on boot
     # power up/down interface
     chmod 0660 /sys/class/rfkill/rfkill0/state
     chmod 0660 /sys/class/rfkill/rfkill0/type
+    write /sys/class/rfkill/rfkill0/state 0
     chown bluetooth net_bt_stack /sys/class/rfkill/rfkill0/state
     chown bluetooth net_bt_stack /sys/class/rfkill/rfkill0/type
 
@@ -73,12 +77,6 @@ on boot
     chown bluetooth net_bt_stack /system/etc/bluetooth
     chown bluetooth net_bt_stack /data/misc/bluetooth
     setprop ro.bt.bdaddr_path "/data/misc/bluetooth/mac.txt"
-
-    # bluetooth LPM
-    chmod 0220 /proc/bluetooth/sleep/lpm
-    chmod 0220 /proc/bluetooth/sleep/btwrite
-    chown bluetooth net_bt_stack /proc/bluetooth/sleep/lpm
-    chown bluetooth net_bt_stack /proc/bluetooth/sleep/btwrite
 
 #NFC
 #   setprop ro.nfc.port "I2C"
