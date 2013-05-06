@@ -33,7 +33,8 @@ EOF
 
 LINEEND=" \\"
 COUNT=`wc -l proprietary-files.txt | awk {'print $1'}`
-for FILE in `cat proprietary-files.txt`; do
+FILES=`cat proprietary-files.txt`
+for FILE in $FILES; do
     COUNT=`expr $COUNT - 1`
     if [ $COUNT = "0" ]; then
         LINEEND=""
@@ -41,6 +42,10 @@ for FILE in `cat proprietary-files.txt`; do
     DEST=`echo $FILE | sed 's:lib/mpu3050:lib:' `
     echo "    $OUTDIR/proprietary/$FILE:system/$DEST$LINEEND" >> $MAKEFILE
 done
+
+# Record MD5 sums of proprietary files
+(cd ../../../$OUTDIR/proprietary; md5sum $FILES) \
+    > proprietary-files.md5sum
 
 (cat << EOF) > ../../../$OUTDIR/$DEVICE-vendor.mk
 # Copyright (C) 2011 The CyanogenMod Project
