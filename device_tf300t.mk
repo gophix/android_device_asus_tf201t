@@ -65,20 +65,22 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 # Extra packages to build for this device
 PRODUCT_PACKAGES += \
-    librs_jni \
-    com.android.future.usb.accessory \
     make_ext4fs \
     setup_fs \
     audio.a2dp.default \
     audio.usb.default \
     libaudioutils \
-    AutoParts_tfp \
     blobpack_tfp \
     mischelp \
     wifimacwriter \
-    com.cyanogenmod.asusdec \
-    libasusdec_jni \
     libnetcmdiface
+
+#PRODUCT_PACKAGES += \
+#    com.android.future.usb.accessory \
+#    librs_jni \
+#    AutoParts_tfp \
+#    com.cyanogenmod.asusdec \
+#    libasusdec_jni
 
 # Propertys spacific for this device
 PRODUCT_PROPERTY_OVERRIDES := \
