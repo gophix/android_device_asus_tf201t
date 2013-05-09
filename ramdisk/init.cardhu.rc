@@ -288,9 +288,9 @@ service sdcard /system/bin/sdcard /data/media /mnt/shell/emulated 1023 1023
     class late_start
 
 # bdaddrwriter - Write ASUS BD_ADDR to /data/misc/bluetooth
-#service bdaddrwriter /system/bin/bdaddrwriter
-#    class main
-#    oneshot
+service bdaddrwriter /system/bin/bdaddrwriter
+    class main
+    oneshot
 
 # Start GPS daemon
   on boot

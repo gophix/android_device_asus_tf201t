@@ -1,3 +1,4 @@
+bin/bdaddrwriter
 bin/glgps
 bin/sensors-config
 bin/tf_daemon
