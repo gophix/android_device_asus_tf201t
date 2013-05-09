@@ -10,6 +10,7 @@ etc/firmware/nvavp_os_0ff00000.bin
 etc/firmware/nvavp_os_eff00000.bin
 etc/firmware/nvavp_vid_ucode_alt.bin
 etc/firmware/nvavp_vid_ucode.bin
+etc/nvaudio_conf_RT5631.xml
 etc/nvaudio_conf_WM8903.xml
 etc/nvcamera.conf
 etc/nvram_nh615.txt

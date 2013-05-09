@@ -10,6 +10,7 @@ cc0d1037b729184a1c88926fdf705dd7  etc/firmware/nvavp_os_0ff00000.bin
 e25ffba6a583ec7a8ec108a957612cce  etc/firmware/nvavp_os_eff00000.bin
 180de2bddec1861dc0cfc1392e869be9  etc/firmware/nvavp_vid_ucode_alt.bin
 afc6628c37447ce9a611af89f1546374  etc/firmware/nvavp_vid_ucode.bin
+6d975cd2b07552b76bae7365694c59c2  etc/nvaudio_conf_RT5631.xml
 a96cef1d8df7c565594a9929df313d56  etc/nvaudio_conf_WM8903.xml
 97bac3efaf2a292f0a1be0f6ac49ce4c  etc/nvcamera.conf
 4a841e34b56399889bbc12396530bd29  etc/nvram_nh615.txt
