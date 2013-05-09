@@ -15,6 +15,7 @@
 $(call inherit-product-if-exists, vendor/asus/tf300t/tf300t-vendor.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/asus/tf300t/overlay
+TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 
 # Files needed for boot image
 PRODUCT_COPY_FILES += \
