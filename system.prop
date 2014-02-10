@@ -1,0 +1,9 @@
+
+#
+# system.prop for tf300
+#
+ro.epad.model=TF300T
+ro.product.model=TF300T
+ro.carrier=wifi-only
+ro.sf.lcd_density=160
+
