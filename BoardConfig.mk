@@ -37,6 +37,10 @@ ARCH_ARM_USE_NON_NEON_MEMCPY := true
 
 NEED_WORKAROUND_CORTEX_A9_745320 := true
 
+# Support both new and old property system
+BUILD_OLD_SYS_PROPS := true
+COMMON_GLOBAL_CFLAGS += -DBUILD_OLD_SYS_PROPS
+
 # Kernel sources
 TARGET_KERNEL_SOURCE := kernel/asus/tf300t
 TARGET_KERNEL_CONFIG := tf300t_mrom_defconfig
