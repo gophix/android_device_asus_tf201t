@@ -15,6 +15,7 @@
 #
 
 TARGET_BUILD_PDK := false
+WITHOUT_CHECK_API := true
 WITHOUT_CLANG := true
 WITHOUT_LIBCOMPILER_RT := true
 
