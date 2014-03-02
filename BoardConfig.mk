@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+LOCAL_PATH := device/asus/tf300t
+
 TARGET_BUILD_PDK := false
 WITHOUT_CHECK_API := true
 WITHOUT_CLANG := true
@@ -70,12 +72,19 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
 
 PRODUCT_COPY_FILES +=  \
-	device/asus/tf300t/twrp/twrp.fstab:recovery/root/etc/twrp.fstab
+	$(LOCAL_PATH)/ramdisk/init.cardhu.rc:root/init.cardhu.rc \
+	$(LOCAL_PATH)/ramdisk/init.tf.rc:root/init.tf.rc \
+	$(LOCAL_PATH)/ramdisk/ueventd.cardhu.rc:root/ueventd.cardhu.rc \
+	$(LOCAL_PATH)/ramdisk/init.cardhu.usb.rc:root/init.cardhu.usb.rc \
+	$(LOCAL_PATH)/ramdisk/init.cardhu.cpu.rc:root/init.cardhu.cpu.rc \
+	$(LOCAL_PATH)/ramdisk/fstab.cardhu:root/fstab.cardhu \
+	$(LOCAL_PATH)/twrp/twrp.fstab:recovery/root/etc/twrp.fstab  \
+	$(LOCAL_PATH)/twrp/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # TWRP
-BOARD_CUSTOM_BOOTIMG_MK := device/asus/tf300t/twrp/recovery.mk
-TARGET_RECOVERY_INITRC := device/asus/tf300t/twrp/init.rc
-TWRP_CUSTOM_KEYBOARD := ../../../device/asus/tf300t/twrp/hardwarekeyboard.cpp
+BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/twrp/recovery.mk
+TARGET_RECOVERY_INITRC := $(LOCAL_PATH)/twrp/init.rc
+TWRP_CUSTOM_KEYBOARD := ../../../$(LOCAL_PATH)/twrp/hardwarekeyboard.cpp
 
 DEVICE_RESOLUTION := 1280x800
 BOARD_NEEDS_LZMA_MINIGZIP := true
@@ -102,10 +111,10 @@ TW_CRYPTO_KEY_LOC := "footer"
 
 # MultiROM (MultiROM also uses parts of TWRP config)
 MR_INPUT_TYPE := type_b
-MR_INIT_DEVICES := device/asus/tf300t/mrom/mr_init_devices.c
+MR_INIT_DEVICES := $(LOCAL_PATH)/mrom/mr_init_devices.c
 #MR_DPI := mdpi
 MR_DPI := hdpi
-MR_FSTAB := device/asus/tf300t/twrp/twrp.fstab
+MR_FSTAB := $(LOCAL_PATH)/twrp/twrp.fstab
 MR_KEXEC_MEM_MIN := 0x84000000
-#MR_INFOS := device/asus/tf300t/mrom/infos
+#MR_INFOS := $(LOCAL_PATH)/mrom/infos
 
