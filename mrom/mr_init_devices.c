@@ -10,9 +10,9 @@ const char *mr_init_devices[] =
 {
 	"/sys/devices/tegradc.0/graphics/fb0",
 
-	"/sys/block/mmcblk0",
 	"/sys/block/mmcblk0/mmcblk0p8",  // /data
 	"/sys/block/mmcblk0/mmcblk0p10", // /boot
+	"/sys/block/mmcblk1*",
 	"/sys/bus/mmc",
 	"/sys/bus/mmc/drivers/mmcblk",
 	"/sys/bus/mmc/drivers/mmc_test",
