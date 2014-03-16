@@ -52,6 +52,7 @@ TARGET_KERNEL_CONFIG := tf300t_mrom_defconfig
 BOARD_KERNEL_CMDLINE  :=
 BOARD_KERNEL_BASE     := 0x10000000
 BOARD_KERNEL_PAGESIZE :=
+BOARD_MKBOOTIMG_ARGS := --board "mrom$(shell date +%Y%m%d)"
 
 # Misc display settings
 BOARD_USE_SKIA_LCDTEXT := true
