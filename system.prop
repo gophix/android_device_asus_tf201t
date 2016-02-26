@@ -1,0 +1,8 @@
+
+#
+# system.prop for tf201
+#
+ro.epad.model=TF201
+ro.product.model=TF201
+ro.carrier=wifi-only
+ro.sf.lcd_density=160
