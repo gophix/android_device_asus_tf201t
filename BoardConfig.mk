@@ -46,11 +46,9 @@ COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
 
 # Kernel sources
 TARGET_KERNEL_SOURCE := kernel/asus/tf201t
-TARGET_KERNEL_CONFIG := tf201t_mrom_defconfig
-# TARGET_KERNEL_SOURCE := kernel/asus/tegra3/unified/
-# TARGET_KERNEL_CONFIG := grimlock_tegra3_defconfig
+TARGET_KERNEL_CONFIG := grimlock_tegra3_defconfig
 
-BOARD_KERNEL_CMDLINE  := console=tty0 loglevel=3
+BOARD_KERNEL_CMDLINE  :=
 BOARD_KERNEL_BASE     := 0x10000000
 BOARD_KERNEL_PAGESIZE :=
 BOARD_MKBOOTIMG_ARGS := --board "mrom$(shell date +%Y%m%d)"
