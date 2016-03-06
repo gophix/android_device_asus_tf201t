@@ -11,8 +11,7 @@ bootloader uses kernel execution (kexec).
 * **TWRP-Multirom** is a *recovery* which extends the capability of twrp to administrate 
 secondary operating systems.
 
-Build instructions:
-will be soon in the wiki.
+Build instructions: [wiki](https://github.com/gophix/android_device_asus_tf201t/wiki)
 
 *Hint*: Originally the device is called TF201. This comes to into operation when the 
 product.device property is read for verification, if the rom matches the
